@@ -1,26 +1,24 @@
 public class Salario {
     public static void main(String[] args) {
 
-        valorProposto(1000.0);
-        valorProposto(2000.0);
-        valorProposto(3000.0);
+        caso1(2000.0, 1000.0);
+        caso1(2000.0, 2000.0);
+        caso1(2000.0, 3000.0);
 
     }
 
-    public static String valorProposto(double valorCandidato) {
+    public static void caso1(double salarioBase, double salarioPretendido) {
 
-        double valorProposto = 2000.0;
+        if (salarioBase > salarioPretendido) {
+            System.out.println("LIGAR PARA O CANDIDATO");
 
-        if (valorProposto > valorCandidato) {
-            System.out.println("AGUARDE CONTRA PROPOSTA");
-
-        } else if (valorCandidato == valorProposto) {
-            System.out.println("LIGANDO PARA CANDIDATO");
-
-        } else if(valorProposto < valorCandidato) {
-            System.out.println("AGUARDANDO OUTROS CANDIDATOS");
         }
+        else if (salarioBase == salarioPretendido) {
+            System.out.println("LIGAR PARA O CANDIDATO, COM CONTRA PROPOSTA");
 
-        return null;
+        }
+        else {
+            System.out.println("AGUARDANDO RESULTADO DOS DEMAIS CANDIDATOS");
+        }
     }
 }
